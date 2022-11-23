@@ -20,33 +20,59 @@ app.post('/ussd', (req, res) => {
 
     if (text == '') {
         response = `CON Welcome to MediCheckup.
-        Murakaze neza, Kuri MediCheckup.
+        Murakaze neza, Kuri Hinga Wizeye Platform.
         
         Please Choose a language
-        1. Kinyarwanda
-        2. English`;
+        1. English
+        2. Kinyarwanda`;
+        
     } else if (text == '1') {
         response = `END Mutwihanganire ntago gukoresha ikinyarwanda birakunda!!`;
     } else if (text == '2') {
-        response = `CON Do you have fever?.
-        1. Yes
-        2. No`;
-
+        response = `CON 
+        1. Amakuru y'iteganyagihe?.
+        2. Amakuru y'umusaruro 
+        3. Inama zijyanye n'ubuhinzi
+        4. Gusaba Ubufasha
+        5. Gusaba Hinga wizeye device
+        00. subira inyuma
+        0. subira ahabanza`;
     } else if (text == '2*1') {
-        response = `CON Do you have headache?.
-        1. Yes
-        2. No`;
+        response = `CON 
+        1.Amakuru yo mu murima nonaha?.
+        2. Iteganyagihe
+        3. Inama z'icyo nakora ubu
+        00. subira inyuma
+        0. subira ahabanza`;
 
     } else if (text == '2*2') {
-        response = `CON Do you have headache?.
-        1. Yes
-        2. No`;
+        response = `CON Amakuru y'umusaruro.
+        1. Umusaruro uteganyijwe iki gihembwe
+        2. Umusaruro w'ibihembwe bishize
+        00. subira inyuma
+        0. subira ahabanza`;
     }
-    else if (text == '2*1*1') {
+    else if (text.endsWith('*0')) {
 
-        response = `CON Do you have muscle and joint pain?.
-        1. Yes
-        2. No`;
+        response = `CON 
+        1. Amakuru y'iteganyagihe?.
+        2. Amakuru y'umusaruro 
+        3. Inama zijyanye n'ubuhinzi
+        4. Gusaba Ubufasha
+        5. Gusaba Hinga wizeye device
+        00. subira inyuma
+        0. subira ahabanza`;
+
+
+    }
+    else if (text == '2*3') {
+
+        response = `CON Inama zijyanye n'ubuhinzi.
+        1. Igihe cyo guhinga
+        2. Igihingwa cyatanga umusaruro
+        3. Guhunika umusaruro
+        00. subira inyuma
+        0. subira ahabanza`;
 
 
     } else if (text == '2*2*1') {
