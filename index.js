@@ -62,7 +62,7 @@ app.post('/ussd', (req, res) => {
         5. Gusaba Hinga wizeye device
         00. subira inyuma
         0. subira ahabanza`;
-        text='1';
+        text='2';
 
     }
     else if (text == '2*3') {
