@@ -21,7 +21,7 @@ app.post('/ussd', (req, res) => {
     if (text == '') {
         response = `CON Welcome to MediCheckup.
         Murakaze neza, Kuri Hinga Wizeye Platform.
-        
+        Hitamo Ururimi
         Please Choose a language
         1. English
         2. Kinyarwanda`;
@@ -75,11 +75,22 @@ app.post('/ussd', (req, res) => {
         0. subira ahabanza`;
 
 
-    } else if (text == '2*2*1') {
+    } else if (text == '2*4') {
 
-        response = `CON Do you have muscle and joint pain?.
-        1. Yes
-        2. No`;
+        response = `CON Ubufasha.
+        Wifuza ubufasha wahamagara nimero ya RAB itishyurwa 1212
+        cyangwa ukatwandikira ubutumwa bugufi kuri +25078278273
+        00. subira inyuma
+        0. subira ahabanza`;
+
+
+    }
+    else if (text == '2*5') {
+
+        response = `CON Gusaba Hinga wizeye device.
+        Iki gikoresho wagisanga kuri koperative ubarizwamo cg ukaduhamagara kuri 0788373733
+        00. subira inyuma
+        0. subira ahabanza`;
 
 
     }
