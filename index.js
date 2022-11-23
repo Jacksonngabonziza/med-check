@@ -103,23 +103,20 @@ app.post('/ussd', (req, res) => {
          ubushyuhe = 25°C
          Ubuhehe mu butaka= 50%
          Humidity =30 RH
-
-         
-         00. subira inyuma
-         0. subira ahabanza`;
+         Umwanzuro: Ntakibazo gihari`;
 
 
     } //2. Iteganyagihe
     else if (text == '2*1*2') {
 
-        response = `CON Iteganyagihe.
+        response = `END Iteganyagihe.
         Biteganyijwe ko ikirere kizaba:
         ubushyuhe = 27°C
-        Ubuhehe mu butaka= 50%
-        Humidity =30 RH
+        Ubuhehe mu butaka = 50%
+        Humidity = 30 RH
         Imvura = 0 mm
-         00. subira inyuma
-         0. subira ahabanza`;
+        Bikomeje gutya mugiriwe inama zo gukoresha
+        uburyo bwo kuvomerera imyaka`;
 
 
     }
