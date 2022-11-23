@@ -27,7 +27,7 @@ app.post('/ussd', (req, res) => {
         2. Kinyarwanda`;
         
     } else if (text == '1') {
-        response = `END Mutwihanganire ntago gukoresha ikinyarwanda birakunda!!`;
+        response = `END Sorry using english is still under development !!`;
     } else if (text == '2') {
         response = `CON 
         1. Amakuru y'iteganyagihe?.
@@ -62,7 +62,7 @@ app.post('/ussd', (req, res) => {
         5. Gusaba Hinga wizeye device
         00. subira inyuma
         0. subira ahabanza`;
-
+        text='1';
 
     }
     else if (text == '2*3') {
