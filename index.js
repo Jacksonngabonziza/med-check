@@ -52,6 +52,7 @@ app.post('/ussd', (req, res) => {
         00. subira inyuma
         0. subira ahabanza`;
     }
+  
     else if (text.endsWith('*0')) {
 
         response = `CON 
@@ -94,18 +95,31 @@ app.post('/ussd', (req, res) => {
 
 
     }
-    else if (text == '2*1*1*1') {
+    //1.Amakuru yo mu murima nonaha?
+    else if (text == '2*1*1') {
 
-        response = `CON Do you have Sore throat?.
-        1. Yes
-        2. No`;
+        response = `END Ibipimo.
+         Ibipimo biva mu mirima ubu bigaragaza ko
+         ubushyuhe = 25°C
+         Ubuhehe mu butaka= 50%
+         Humidity =30 RH
+
+         
+         00. subira inyuma
+         0. subira ahabanza`;
 
 
-    } else if (text == '2*2*1*1') {
+    } //2. Iteganyagihe
+    else if (text == '2*1*2') {
 
-        response = `CON Do you have Sore throat?.
-        1. Yes
-        2. No`;
+        response = `CON Iteganyagihe.
+        Biteganyijwe ko ikirere kizaba:
+        ubushyuhe = 27°C
+        Ubuhehe mu butaka= 50%
+        Humidity =30 RH
+        Imvura = 0 mm
+         00. subira inyuma
+         0. subira ahabanza`;
 
 
     }
