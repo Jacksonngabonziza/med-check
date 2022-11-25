@@ -19,10 +19,7 @@ app.post('/ussd', (req, res) => {
     let response = '';
 
     if (text == '') {
-        response = `CON Welcome to MediCheckup.
-        Murakaze neza, Kuri Hinga Wizeye Platform.
-        Hitamo Ururimi
-        Please Choose a language
+        response = `CON Murakaze neza, Kuri Hinga Wizeye Platform.
         1. English
         2. Kinyarwanda`;
         
@@ -120,10 +117,12 @@ app.post('/ussd', (req, res) => {
 
 
     }
-    else if (text == '2*1*1*1*1') {
+    //3. Inama z'icyo nakora ubu
+    else if (text == '2*1*3') {
 
-        response = `END We are sorry to announce you that, these look like the EBOLA signs and symptoms.
-        Please contact 007 for an emergency MEDICAL SUPPORT`;
+        response = `END Inama z'icyo  Wakora ubu
+        Dushingiye ku bipimo biva mu mirima 
+        nta`;
     }
     else if (text == '2*2*1*1*1') {
 
