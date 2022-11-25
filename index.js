@@ -24,23 +24,12 @@ app.post('/ussd', (req, res) => {
     } else if (text == '1') {
         response = `END Sorry using english is still under development !!`;
     } else if (text == '2') {
-        response = `CON 1. Amakuru y'iteganyagihe.\n2. Amakuru y'umusaruro\n3. Inama zijyanye n'ubuhinzi\n 4. Gusaba Ubufasha\n5. Gusaba Hinga wizeye device
-        00. subira inyuma
-        0. subira ahabanza`;
+        response = `CON 1. Amakuru y'iteganyagihe.\n2. Amakuru y'umusaruro\n3. Inama zijyanye n'ubuhinzi\n 4. Gusaba Ubufasha\n5. Gusaba Hinga wizeye device\n00. subira inyuma \n0. subira ahabanza`;
     } else if (text == '2*1') {
-        response = `CON 
-        1.Amakuru yo mu murima nonaha?.
-        2. Iteganyagihe
-        3. Inama z'icyo nakora ubu
-        00. subira inyuma
-        0. subira ahabanza`;
+        response = `CON 1.Amakuru yo mu murima nonaha?.\n2. Iteganyagihe\n3. Inama z'icyo nakora ubu \n00. subira inyuma \n0. subira ahabanza`;
 
     } else if (text == '2*2') {
-        response = `CON Amakuru y'umusaruro.
-        1. Umusaruro uteganyijwe iki gihembwe
-        2. Umusaruro w'ibihembwe bishize
-        00. subira inyuma
-        0. subira ahabanza`;
+        response = `CON Amakuru y'umusaruro.\n1. Umusaruro uteganyijwe iki gihembwe\n2. Umusaruro w'ibihembwe bishize \n00. subira inyuma\n 0. subira ahabanza`;
     }
   
     else if (text.endsWith('*0')) {
