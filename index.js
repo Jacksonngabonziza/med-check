@@ -19,9 +19,8 @@ app.post('/ussd', (req, res) => {
     let response = '';
 
     if (text == '') {
-        response = `CON Murakaze neza, Kuri Hinga Wizeye Platform.
-        1. English
-        2. Kinyarwanda`;
+        response = `CON Ikaze Kuri Hinga Wizeye Platform.
+        1. English\n2. Kinyarwanda`;
         
     } else if (text == '1') {
         response = `END Sorry using english is still under development !!`;
