@@ -24,11 +24,8 @@ app.post('/ussd', (req, res) => {
     } else if (text == '1') {
         response = `END Sorry using english is still under development !!`;
     } else if (text == '2') {
-        response = `CON 1. Amakuru y'iteganyagihe.\n2. Amakuru y'umusaruro 
-        \n3. Inama zijyanye n'ubuhinzi
-       \n 4. Gusaba Ubufasha
-        \n5. Gusaba Hinga wizeye device
-        \n00. subira inyuma
+        response = `CON 1. Amakuru y'iteganyagihe.\n2. Amakuru y'umusaruro\n3. Inama zijyanye n'ubuhinzi\n 4. Gusaba Ubufasha\n5. Gusaba Hinga wizeye device
+        00. subira inyuma
         0. subira ahabanza`;
     } else if (text == '2*1') {
         response = `CON 
