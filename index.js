@@ -19,8 +19,7 @@ app.post('/ussd', (req, res) => {
     let response = '';
 
     if (text == '') {
-        response = `CON Ikaze Kuri Hinga Wizeye Platform.
-        1. English\n2. Kinyarwanda`;
+        response = `CON Ikaze Kuri Hinga Wizeye Platform.\n1. English\n2. Kinyarwanda`;
         
     } else if (text == '1') {
         response = `END Sorry using english is still under development !!`;
@@ -123,12 +122,7 @@ app.post('/ussd', (req, res) => {
         Dushingiye ku bipimo biva mu mirima 
         nta`;
     }
-    else if (text == '2*2*1*1*1') {
-
-        response = `END We are sorry for the body pain, 
-        these don't look like the EBOLA signs and symptoms.
-        Please contact 911 for a MEDICAL ADVICE`;
-    }
+    
 
     // Send the response back to the API
     res.set('Content-Type: text/plain');
